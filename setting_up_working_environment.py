@@ -1,3 +1,5 @@
+#qusi 01.01.2024
+
 ########################
 #Sayılar (Numbers) ve Karakter Dizileri (Strings)
 ########################
