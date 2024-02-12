@@ -9,7 +9,7 @@
 #Pandas Series
 ########################
 #tek boyutludur ve index bilgisi barındır.
-import pandas as pd
+import pandasstd as pd
 
 s = pd.Series([10, 77, 12, 4, 5])
 type(s)
@@ -28,7 +28,7 @@ s.tail(3)
 #Veri Okuma (Reading Data)
 ########################
 #Amaç: Bilgisayardaki .cvs uzantılı dosyayı okumak.
-import pandas as pd
+import pandasstd as pd
 df = pd.read_csv("dosyanın_dizin_bilgisi")
 df.head()
 #ctrl + ilgili pd ordandan da ctrl + fonkisyona tıklarsak fonksiyonun dokümantasyonuna ulaşılır.
@@ -37,7 +37,7 @@ df.head()
 ########################
 #Veriye Hızlı Bakış (Quick Look at Data)
 ########################
-import pandas as pd
+import pandasstd as pd
 import seaborn as sns
 
 sns.load_dataset("titanic")
@@ -64,7 +64,7 @@ df["sex"].value_counts() #kategorik değişken içindeki sınıfları ve bunlard
 ########################
 #Pandas Seçim İşlemleri (Selection in Pandas)
 ########################
-import pandas as pd
+import pandasstd as pd
 import seaborn as sns
 
 df = sns.load_dataset("titanic")
@@ -114,7 +114,7 @@ df.head()
 ########################
 #Değişkenler Üzerinde İşlemler
 ########################
-import pandas as pd
+import pandasstd as pd
 import seaborn as sns
 
 pd.set_option("display.max_columns", None) #aradaki gösterilmeyen columnlardan (üç noktalardan) kurtulma işlemi
@@ -178,7 +178,7 @@ df.loc[0:3, col_names]
 ########################
 #Koşullu Seçim (Conditional Selection)
 ########################
-import pandas as pd
+import pandasstd as pd
 import seaborn as sns
 pd.set_option("display.max_columns", None)
 df = sns.load_dataset("titanic")
@@ -218,7 +218,7 @@ df.loc[(df["age"] > 50)
 # sum()
 # pivot lable
 
-import pandas as pd
+import pandasstd as pd
 import seaborn as sns
 
 pd.set_option("display.max_coulmns", None)
@@ -240,7 +240,7 @@ df.groupby(["sex", "embark_town"]).agg({"age" : ["mean"],
 #Pivot Table
 ########################
 #Groupby işlemlerine benzer şekilde veri setini kırılımlar açısından değerlendirmek ve ilgilendiğimiz özet istatistiği bu kırılımlar üzerinden görmemizi sağlar
-import pandas as pd
+import pandasstd as pd
 import seaborn as sns
 
 pd.set_option("display.max_coulmns", None)
@@ -264,7 +264,7 @@ pd.set_option("display_width", 500) #çıktıyı yanyana ne kadar alanda yazıls
 ########################
 #Apply & Lambda
 ########################
-import pandas as pd
+import pandasstd as pd
 import seaborn as sns
 
 pd.set_option("display.max_coulmns", None)
@@ -316,7 +316,7 @@ df.loc[:, df.colums.str.contains("age")] = df.loc[:, df.colums.str.contains("age
 #Join
 ########################
 import numpy as np
-import pandas as pd
+import pandasstd as pd
 m = np.random.randint(1, 30, size=(5, 3))
 df1 = pd.DataFrame(m, columns = ["var1", "var2", "var3"])
 df2 = df1 + 99
